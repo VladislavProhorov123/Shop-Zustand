@@ -2,4 +2,29 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background: #F5F5FA;
 }
+
+:root {
+  /* Основные цвета */
+  --color-bg: #F5F5FA;             /* светлый фон сайта */
+  --color-surface: #FFFFFF;        /* карточки, панели */
+  --color-border: #E5E7EB;         /* мягкие границы */
+
+  /* Текст */
+  --color-text-primary: #1F1F3A;   /* основной текст */
+  --color-text-secondary: #6B7280; /* второстепенный текст */
+
+  /* Акцент */
+  --color-accent: #7C3AED;         /* фиолетовый, точка в Flux.Shop, hover, выделение */
+
+  /* Кнопки */
+  --color-btn-bg: #7C3AED;         /* фон кнопок */
+  --color-btn-text: #FFFFFF;       /* текст кнопок */
+
+  /* Инпуты */
+  --color-input-bg: #FFFFFF;       /* фон инпутов */
+  --color-input-text: #1F1F3A;     /* текст инпутов */
+  --color-input-border: #E5E7EB;   /* граница инпутов */
+}
+
