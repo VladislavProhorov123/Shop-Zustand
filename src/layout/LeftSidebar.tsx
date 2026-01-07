@@ -8,7 +8,10 @@ interface LeftSidebarProps {
 
 export default function LeftSidebar({isOpen, toggle}:LeftSidebarProps) {
   return (
-    <aside className={`border-2 border-blue-500 p-4 transition-all duration-300 ${isOpen ? 'w-[220px]' : 'w-[50px]'} overflow-hidden`}>
+    <aside className={` h-full 
+    bg-[var(--color-surface)] border-r border-[var(--color-border)]
+    shadow-lg p-4 rounded-r-lg
+    transition-all duration-300 ${isOpen ? 'w-[220px]' : 'w-[50px]'} overflow-hidden`}>
       {isOpen ? (
         <>
         <p>LEFT SIDEBAR (FILTERS)</p>
