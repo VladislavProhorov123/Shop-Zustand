@@ -19,7 +19,7 @@ export default function ProductCard({id, title, price}: ProductCardProps) {
   const inCart = cart.some((item) => item.id === id)
 
   return (
-    <div className="flex flex-col justify-between w-[260px] h-[240px] bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-sm transition hover:shadow-md p-3 cursor-pointer">
+    <div className="flex flex-col justify-between w-[260px] h-[240px] bg-[var(--color-bg-alt)]  rounded-lg shadow-lg transition hover:shadow-md p-3 cursor-pointer">
       <div className="w-full h-[120px] bg-gray-100 rounded-md mb-3 flex items-center justify-center text-gray-400">
         IMAGE
       </div>

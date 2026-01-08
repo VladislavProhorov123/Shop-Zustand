@@ -14,8 +14,8 @@ export default function RightSidebar({ isOpen, toggle }: RightSidebarProps) {
   const [activeTab, setActiveTab] = useState<Tab>("cart");
   return (
     <aside
-      className={` h-full 
-    bg-[var(--color-surface)] border-r border-[var(--color-border)]
+      className={`text-[var(--color-text-primary)] h-full 
+    bg-[var(--color-bg-alt)] rounded-l-lg
     shadow-lg p-4 rounded-r-lg
     transition-all duration-300
  ${isOpen ? "w-[360px]" : "w-[50px]"} overflow-hidden`}
@@ -51,7 +51,7 @@ export default function RightSidebar({ isOpen, toggle }: RightSidebarProps) {
         </>
       ) : (
         <button onClick={toggle}>
-          <ArrowBigLeftDash />
+          <ArrowBigLeftDash className="cursor-pointer" stroke="var(--color-accent)"  />
         </button>
       )}
     </aside>

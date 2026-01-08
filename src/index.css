@@ -2,29 +2,61 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background: #F5F5FA;
+  background: var(--color-bg);
 }
 
 :root {
   /* Основные цвета */
-  --color-bg: #F5F5FA;             /* светлый фон сайта */
-  --color-surface: #FFFFFF;        /* карточки, панели */
-  --color-border: #E5E7EB;         /* мягкие границы */
+  --color-surface: #ffffff;
+  --color-icon-primary: #09090b;
 
   /* Текст */
-  --color-text-primary: #1F1F3A;   /* основной текст */
-  --color-text-secondary: #6B7280; /* второстепенный текст */
+  --color-text-primary: #1f1f3a; /* основной текст */
+  --color-text-secondary: #6b7280; /* второстепенный текст */
 
   /* Акцент */
-  --color-accent: #7C3AED;         /* фиолетовый, точка в Flux.Shop, hover, выделение */
+  --color-accent: #7c3aed; /* фиолетовый, точка в Flux.Shop, hover, выделение */
 
   /* Кнопки */
-  --color-btn-bg: #7C3AED;         /* фон кнопок */
-  --color-btn-text: #FFFFFF;       /* текст кнопок */
+  --color-btn-bg: #7c3aed; /* фон кнопок */
+  --color-btn-text: #ffffff; /* текст кнопок */
 
   /* Инпуты */
-  --color-input-bg: #FFFFFF;       /* фон инпутов */
-  --color-input-text: #1F1F3A;     /* текст инпутов */
-  --color-input-border: #E5E7EB;   /* граница инпутов */
+  --color-input-bg: #ffffff; /* фон инпутов */
+  --color-input-text: #1f1f3a; /* текст инпутов */
+  --color-input-border: #e5e7eb;
+
+  --color-bg: #f5f5fa;
+  --color-border: #0f172a;
 }
 
+html.dark {
+  /* Surface */
+  --color-surface: #09090b;
+  --color-icon-primary: #ffffff;
+
+   --color-bg: #121212; /* slate-950 */
+  --color-border: #ffffff;
+
+  --color-bg-alt: #1f1f1f;   /* Второстепенный фон (карточки, панели) */
+
+  --color-text-primary: #e5e7eb;     /* Основной текст — светло-серый */
+--color-text-muted: #9ca3af; /* Менее важный текст, подсказки */
+--color-text-inverse: #ffffff; /* Для кнопок на темном фоне */
+
+
+  --color-surface-muted: #18181b;
+
+  /* Text */
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+
+  --color-border: #2c2c2c;    /* бордеры карточек и input */
+--color-border-accent: #7c3aed; /* активные бордеры, ховеры */
+--color-hover-bg: #9d4edd;  /* hover кнопок/активных элементов */
+
+  /* Border */
+
+  /* Accent */
+  --color-accent: #a78bfa; /* более светлый фиолетовый */
+}

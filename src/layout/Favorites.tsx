@@ -13,7 +13,7 @@ export default function Favorites() {
       {favoriteProducts.length === 0 ? (
         <p>No favorites yet...</p>
       ) : (
-        <div className="flex flex-col gap-4 overflow-y-auto max-h-[500px] items-center">
+        <div className="flex flex-col gap-4 overflow-y-auto max-h-[500px] items-center ">
           {favoriteProducts.map((prod) => (
             <ProductCard key={prod.id} id={prod.id} title={prod.title} price={prod.price} />
           ))}

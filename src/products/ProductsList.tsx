@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductCard from "./ProductCard";
 import { product } from "../data/data";
 
-
-export default function ProductsList() {
+export default function ProductsList({filteredProducts}) {
+  
   return (
     <div className="flex flex-wrap gap-7 ">
-      {product.map((prod) => (
+      {filteredProducts.map((prod) => (
         <ProductCard
           key={prod.id}
           title={prod.title}
