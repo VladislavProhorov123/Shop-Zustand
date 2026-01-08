@@ -49,7 +49,7 @@ const filterStore: StateCreator<IFilterState> = (set) => ({
   resetFilters: () => set({ ...initialFilterState }),
 });
 
-const useFilterStore = create<IFilterState>()(
+export const useFilterStore = create<IFilterState>()(
   devtools(
     persist(filterStore, {
       name: "filter-storage",
@@ -64,6 +64,7 @@ export const useSetSearchTerm = () =>
 export const useCategory = () => useFilterStore((state) => state.category);
 export const useSetCategory = () =>
   useFilterStore((state) => state.setCategory);
+export const useSelectedBrand = () => useFilterStore((state) => state.selectedBrand);
 export const useSetSelectedBrand = () =>
   useFilterStore((state) => state.setSelectedBrand);
 export const useMinPrice = () => useFilterStore((state) => state.minPrice);
@@ -78,6 +79,6 @@ export const useSetMinRating = () =>
 export const useShowInStockOnly = () =>
   useFilterStore((state) => state.showInStockOnly);
 export const useSetInStockOnly = () =>
-  useFilterStore((state) => state.setInStockOnly);
+  useFilterStore((state) => state.setShowInStockOnly);
 export const useResetFilters = () =>
   useFilterStore((state) => state.resetFilters);
