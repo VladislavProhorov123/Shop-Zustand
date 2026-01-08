@@ -7,11 +7,14 @@ export default function ProductsPage() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [category, setCategory] = useState<string>("All");
 
-  const categories = ["All", "Clothes", "Shoes", "Accessories"];
+  const categories = ["All", "Clothes", "Shoes", "Clothes"];
+
+  
 
   const filteredProducts = product
     .filter((p) => p.category === category || category === "All")
-    .filter((p) => p.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    .filter((p) => p.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    
 
   return (
     <section className={`flex-1  flex flex-col p-4 `}>
