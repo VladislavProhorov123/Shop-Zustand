@@ -45,10 +45,12 @@ export default function LeftSidebar({ isOpen, toggle }: LeftSidebarProps) {
     >
       {isOpen ? (
         <>
+        <div className="flex items-start">
           <p>LEFT SIDEBAR (FILTERS)</p>
           <button onClick={toggle}>
             <ArrowBigLeftDashIcon stroke="var(--color-accent)" />
           </button>
+        </div>
 
           {["All", "Nike", "Adidas", "Puma"].map((brand) => (
             <label htmlFor="">
@@ -60,6 +62,20 @@ export default function LeftSidebar({ isOpen, toggle }: LeftSidebarProps) {
               {brand}
             </label>
           ))}
+
+          <h4>Price</h4>
+          <div className="flex gap-2">
+            <input type="number" value={minPrice} onChange={(e) => setMinPrice(Number(e.target.value))} placeholder="Min" className="border p-1 w-20" />
+            <input type="number" value={maxPrice} onChange={(e) => setMaxPrice(Number(e.target.value))} placeholder="Max" className="border p-1 w-20" />
+          </div>
+
+          <h4>Rating</h4>
+          <input type="number" min={0} max={5} value={minRating} onChange={(e) => setMinRating(Number(e.target.value))} className="border p-1 w-20" />
+
+          <h4>In Stock Only</h4>
+          <label htmlFor="">
+            <input type="checkbox" checked={showInStockOnly} onChange={(e) => setShowInStockOnly(e.target.checked)} />
+          </label>
         </>
       ) : (
         <button onClick={toggle}>
