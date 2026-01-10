@@ -18,7 +18,7 @@ export default function RightSidebar({ isOpen, toggle }: RightSidebarProps) {
     bg-[var(--color-bg-alt)] rounded-l-lg
     shadow-lg p-4 rounded-r-lg
     transition-all duration-300
- ${isOpen ? "w-[360px]" : "w-[50px]"} overflow-hidden`}
+ ${isOpen ? "w-[400px]" : "w-[50px]"} overflow-hidden`}
     >
       {isOpen ? (
         <>

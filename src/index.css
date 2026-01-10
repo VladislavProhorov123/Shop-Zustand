@@ -28,6 +28,8 @@ body {
 
   --color-bg: #f5f5fa;
   --color-border: #0f172a;
+
+  --color-border-accent: #7c3aed
 }
 
 html.dark {
